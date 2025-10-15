@@ -26,11 +26,11 @@ public class DesafioApplication implements CommandLineRunner {
 		Order orderExemplo3 = new Order(1309,95.90,0.0);
 
 		System.out.println("--------------");
-		System.out.println("Resultado do Exemplo 1: " + orderService.total(orderExemplo1));
+		System.out.println("Número do Pedido: " + orderExemplo1.getCode()+" "+"Resultado do Exemplo 1: " + orderService.total(orderExemplo1));
 		System.out.println("--------------");
-		System.out.println("Resultado do Exemplo 2: " + orderService.total(orderExemplo2));		
+		System.out.println("Número do Pedido: " + orderExemplo2.getCode()+" "+"Resultado do Exemplo 2: " + orderService.total(orderExemplo2));
 		System.out.println("--------------");
-		System.out.println("Resultado do Exemplo 3: " + orderService.total(orderExemplo3));
+		System.out.println("Número do Pedido: " + orderExemplo3.getCode()+" "+"Resultado do Exemplo 3: " + orderService.total(orderExemplo3));
 	}
 
 	

@@ -12,7 +12,11 @@ public class OrderService {
     private ShippingService shippingService;
 
     public double total(Order order){
-        return (order.getBasic() * (order.getDiscount() /100 )) +
-            shippingService.shipment(order);
+        Order orderClone = new Order(order.getCode(),order.getBasic(),order.getDiscount());
+        double discount = order.getBasic() * (order.getDiscount()/100);
+        double valueTotal = order.getBasic() - discount;
+        orderClone.setBasic(valueTotal);
+
+        return shippingService.shipment(orderClone) + valueTotal;
     }
 }
